@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -11,15 +10,52 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Indie Soldier</title>
-
-    <style>
-        body{
-            background: linear-gradient(to right, rgba(251, 255, 0, 0.625), rgba(166, 0, 255, 0.625));
-            text-align: center;
-        }
-    </style>
+ 
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto; 
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 200px;
+      margin: 10px;
+      padding: 15px;
+      background-color: #fff;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .product-card button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
-
 
 <body>
 
@@ -31,10 +67,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto"> <!-- Itens à esquerda -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="produtos.html">Produtos</a>
                 </li>
                 <li class="nav-item">
@@ -51,24 +87,47 @@
             </ul>
         </div>
     </nav>
+
+
+<h1>Produtos</h1>
+
+<div class="container">
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 1">
+    <h3>Nome do Jogo 1</h3>
+    <p>R$ 120,00</p>
+    <button onclick="addToCart('Nome do Jogo 1', 120)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 2">
+    <h3>Nome do Jogo 2</h3>
+    <p>R$ 250,00</p>
+    <button onclick="addToCart('Nome do Jogo 2', 250)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 3">
+    <h3>Nome do Jogo 3</h3>
+    <p>R$ 180,00</p>
+    <button onclick="addToCart('Nome do Jogo 3', 180)">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<script>
+  function addToCart(productName, price) {
+    // Obtém o carrinho do localStorage ou cria um array vazio se não houver
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-     <!-- título -->
-      <br>
-      <h1>INDIE SOLDIER</h1>
-      <br>
+    // Adiciona o novo item ao carrinho
+    cart.push({ name: productName, price: price, quantity: 1 });
+    
+    // Armazena o carrinho atualizado no localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    alert(productName + ' foi adicionado ao carrinho!');
+  }
+</script>
 
-      <!-- logo da imagem dentro da box -->
-    <div>
-        <header>
-            <img src="img/logo.jpg" width="280px" height="280px" alt="">
-        </header>
-    </div>  
-
-    <!-- botão produtos -->
-    <br>
-    <a href="produtos.html" class="btn btn-danger col-sm-1" id="first" role="button" aria-pressed="true">Produtos</a>
-    <br>
 </body>
-
-
 </html>
