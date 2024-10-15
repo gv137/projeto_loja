@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body{
+    background: linear-gradient(to right, rgba(251, 255, 0, 0.625), rgba(166, 0, 255, 0.625));
+    text-align: center;
+}
+
+header{
+    background-color: aquamarine;
+    height: 300px;
+    width: 300px;
+
+    border: 10px solid rgb(193, 139, 1);
+    margin: 30px auto 45px auto;
+    outline-style: dashed;
+    outline-color: rgb(21, 0, 255);
+    outline-width: 10px;
+    animation-name: example;
+    animation-duration: 4s;
+}     
+
+h1{
+    font-family: fantasy;
+    text-align: center;
+}
+
+a:hover{
+    color: darkgreen;
+}
+
+#first{
+    box-shadow: 4px 3px 4px 1px rgb(0, 0, 0);
+}
+
+#direita{
+    position: absolute;
+    right: 16px;
+}
