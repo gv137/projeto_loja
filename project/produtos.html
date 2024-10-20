@@ -8,59 +8,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Indie Soldier</title>
+    <link rel="stylesheet" href="styleProdutos.css">
+    <title>Produtos</title>
  
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-      margin: 0 auto; 
-    }
-    .product-card {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 200px;
-      margin: 10px;
-      padding: 15px;
-      background-color: #fff;
-      text-align: center;
-    }
-    .product-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    .product-card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .product-card button {
-      background-color: #28a745;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .product-card button:hover {
-      background-color: #218838;
-    }
-  </style>
 </head>
 
 <body>
 
     <!-- barra de navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, rgba(251, 255, 0, 0.625), rgba(44, 178, 127, 0.629), rgba(166, 0, 255, 0.625));">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, rgba(201, 0, 80, 0.625), rgba(44, 178, 127, 0.625), rgba(1, 170, 32, 0.625));">
         <a class="navbar-brand"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: black;">
             <span class="navbar-toggler-icon"></span> <font face="Didot">menu</font>
@@ -79,10 +35,10 @@
             </ul>
             <ul class="navbar-nav" id="direita"> <!-- Itens à direita -->
                 <li class="nav-item">
-                    <a class="nav-link" href="link1.html">Entrar</a>
+                    <a class="nav-link" href="entrar.html">&#9787; Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="link2.html">Cadastrar</a>
+                    <a class="nav-link" href="cadastro.html">Cadastrar</a>
                 </li>              
             </ul>
         </div>
@@ -92,21 +48,71 @@
 <h1>Produtos</h1>
 
 <div class="container">
-  <div class="product-card">
+  <div class="cardProduto">
     <img src="https://via.placeholder.com/200x150" alt="Jogo 1">
     <h3>Nome do Jogo 1</h3>
     <p>R$ 120,00</p>
     <button onclick="addToCart('Nome do Jogo 1', 120)">Adicionar ao Carrinho</button>
   </div>
 
-  <div class="product-card">
+  <div class="cardProduto">
     <img src="https://via.placeholder.com/200x150" alt="Jogo 2">
     <h3>Nome do Jogo 2</h3>
     <p>R$ 250,00</p>
     <button onclick="addToCart('Nome do Jogo 2', 250)">Adicionar ao Carrinho</button>
   </div>
 
-  <div class="product-card">
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 3">
+    <h3>Nome do Jogo 3</h3>
+    <p>R$ 180,00</p>
+    <button onclick="addToCart('Nome do Jogo 3', 180)">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<br><br>
+
+<div class="container">
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 1">
+    <h3>Nome do Jogo 1</h3>
+    <p>R$ 120,00</p>
+    <button onclick="addToCart('Nome do Jogo 1', 120)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 2">
+    <h3>Nome do Jogo 2</h3>
+    <p>R$ 250,00</p>
+    <button onclick="addToCart('Nome do Jogo 2', 250)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 3">
+    <h3>Nome do Jogo 3</h3>
+    <p>R$ 180,00</p>
+    <button onclick="addToCart('Nome do Jogo 3', 180)">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<br><br>
+
+<div class="container">
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 1">
+    <h3>Nome do Jogo 1</h3>
+    <p>R$ 120,00</p>
+    <button onclick="addToCart('Nome do Jogo 1', 120)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="cardProduto">
+    <img src="https://via.placeholder.com/200x150" alt="Jogo 2">
+    <h3>Nome do Jogo 2</h3>
+    <p>R$ 250,00</p>
+    <button onclick="addToCart('Nome do Jogo 2', 250)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="cardProduto">
     <img src="https://via.placeholder.com/200x150" alt="Jogo 3">
     <h3>Nome do Jogo 3</h3>
     <p>R$ 180,00</p>
