@@ -1,18 +1,17 @@
 <?php
 require_once 'conexao.php';
 
-class cadastro {
+class Cadastro {
     private $conn;
 
-    public function_construct() {
-        $conexao = new conexao();
-        $this->conn = $conexao->getConnection(); 
+    public function __construct() {
+        $conexao = new Conexao();
+        $this->conn = $conexao->getConnection();
     }
 
-    public function create($nome, $email, $senha){
+    public function create($nome, $email, $senha) {
         $query = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
-        return mysqli_query($this->conn, $query);
+        return $this->conn->query($query);
     }
 }
-
 ?>

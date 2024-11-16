@@ -1,19 +1,22 @@
-<?php 
+<?php
+class Conexao {
+    private $conn;
 
-class conexao{
-    private $host = 'localhost';
-    private $username = 'root';
-    private $password = '';
-    private $database = 'loja_indie'
-    public $conn;
+    public function __construct() {
+        $host = 'localhost';
+        $dbname = 'lojaIndie';
+        $username = 'root';
+        $password = ''; 
 
-    public function getConnection(){
-        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
+        $this->conn = new mysqli($host, $username, $password, $dbname);
+
         if ($this->conn->connect_error) {
-            die("Erro na conexão: ".$this->conn->connect_error);
+            die("Erro na conexão: " . $this->conn->connect_error);
         }
+    }
+
+    public function getConnection() {
         return $this->conn;
     }
 }
-
 ?>
